@@ -13,6 +13,18 @@
     <img src="{{ asset($photo->path) }}" alt="">
     <p>{{ $photo->title }}</p>
         @endforeach
+
+        <form action="{{ route('photos.store') }}" method="POST" enctype="multipart/form-data">
+    @csrf
+    <label>Judul Foto:</label>
+    <input type="text" name="title" required>
+    
+    <label>Pilih Foto:</label>
+    <input type="file" name="photo" required>
+    
+    <button type="submit">Upload</button>
+</form>
+
 </div>
 </body>
 </html>

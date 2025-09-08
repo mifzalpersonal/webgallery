@@ -8,3 +8,4 @@ Route::get('/', function () {
 });
 
 Route::get('/gallery', [GalleryController::class, 'index']);
+Route::post('/upload', [GalleryController::class, 'store'])->name('photos.store');
