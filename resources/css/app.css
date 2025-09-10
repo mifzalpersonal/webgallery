@@ -11,6 +11,44 @@
         "Noto Color Emoji";
 }
 
+body,
+html {
+    background-color: #212121;
+    color: white;
+}
+
+input[type="file"] {
+    border: 1px solid #ccc;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+.btn {
+    background: #4f46e5;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.nengahin {
+    margin-top: 130px;
+    font-size: 40px;
+}
+
+.nengahin-isi {
+    margin-top: 470px;
+    font-size: 40px;
+    margin-left: 10px;
+}
+
+.upload {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
 .gallery {
     display: flex;
     gap: 16px;
