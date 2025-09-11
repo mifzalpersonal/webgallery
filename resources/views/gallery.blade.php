@@ -9,7 +9,9 @@
 <body>
     <div class="upload">
     <h1>you heard?</h1>
-    <img src="" alt="">
+   @foreach ($photos as $photo)
+    <img src="{{ asset('storage/' . $photo->path) }}" width="200">
+@endforeach
    </div>
 
 </div>

@@ -11,10 +11,11 @@
         <div class="nengahin">
             <h1>admin woyyy</h1>
                 <div class="nengahin-isi">
-                    <form action="file" method="post" enctype="multipart/form-data">
+                    <form action="{{ route('gallery.store') }}" method="post" enctype="multipart/form-data">
                      @csrf
                     <label for="photo" class="btn">Pilih Foto</label>
                     <input type="file" name="photo">
+                    <button type="submit" class="btn">Upload</button>
                     </form>
                 </div>
         </div>

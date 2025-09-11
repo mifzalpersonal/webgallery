@@ -7,5 +7,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/gallery', [GalleryController::class, 'index']);
+Route::get('/gallery', [GalleryController::class, 'index'])->name('gallery.index');
 Route::get('/admin', [GalleryController::class, 'admin']);
+Route::post('/admin', [GalleryController::class, 'store'])->name('gallery.store');
