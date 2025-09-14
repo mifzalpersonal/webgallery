@@ -52,6 +52,7 @@
             gap: 15px;
             justify-items: center;
             padding: 0 30px 30px 30px;
+            margin-top: 20px;
         }
 
         .upload img {
@@ -78,7 +79,7 @@
         </div>
     </div>
 
-    <h1 class="gallery-title">Wallheaven!</h1>
+    <!-- <h1 class="gallery-title">Wallheaven!</h1> -->
     <div class="upload">
         @foreach ($photos as $photo)
             <img src="{{ asset('storage/' . $photo->path) }}" alt="Photo">
