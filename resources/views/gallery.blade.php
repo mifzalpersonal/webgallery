@@ -11,6 +11,7 @@
     <h1>you heard?</h1>
    @foreach ($photos as $photo)
     <img src="{{ asset('storage/' . $photo->path) }}" width="200">
+    
 @endforeach
    </div>
 

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 use App\Models\Photo;
 
@@ -13,7 +14,8 @@ class GalleryController extends Controller
     }
 
     public function admin() {
-        return view('admin');
+        $photos = Photo::all();
+        return view('admin', compact('photos'));
     }
 
     public function store(Request $request) {
@@ -24,8 +26,18 @@ class GalleryController extends Controller
 
         $path = $request->file('photo')->store('photos', 'public');
         Photo::create(['path' => $path]);
-        return redirect()->route('gallery.index')->with('success', 'Foto berhasil diupload!');
+        return redirect()->route('gallery.admin')->with('success', 'Foto berhasil diupload!');
     }
+
+    public function delete($id) {
+    
+        $photo = Photo::findOrFail($id);
+        Storage::disk('public')->delete($photo->path);
+        $photo->delete();
+        return redirect()->route('gallery.admin')->with('success', 'Foto berhasil dihapus!');
+    }
+        
+    
 }
 
 
