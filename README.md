@@ -63,6 +63,7 @@ The Laravel framework is open-sourced software licensed under the [MIT license](
 =======
 # Step by step to set it up
 oke jadi 
+
 php artisan storage:link
 
 php artisan key:generate
